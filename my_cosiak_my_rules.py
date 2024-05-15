@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import clr
 clr.AddReference('RevitAPI')
 import Autodesk.Revit.DB as DB
@@ -52,10 +53,17 @@ for family in familyHasInstances:
 
 print ("{} {}".format("Решение result =", result))
 =======
+=======
+>>>>>>> fe95388 (Revert "Добавил наполнение тестовому модулю")
 def pick_rooms():
     references = uidoc.Selection.PickObjects(
         Selection.ObjectType.Element, RoomSelectionFilter(),
         'Выделите помещения')
     return [doc.GetElement(reference)
 for reference in references]
+<<<<<<< HEAD
 >>>>>>> c3ec813 (Сделал другую функцию в тестовом модуле)
+=======
+=======
+>>>>>>> parent of 8642c3e (Добавил наполнение тестовому модулю)
+>>>>>>> fe95388 (Revert "Добавил наполнение тестовому модулю")

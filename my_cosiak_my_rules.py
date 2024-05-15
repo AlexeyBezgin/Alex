@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import clr
 clr.AddReference('RevitAPI')
 import Autodesk.Revit.DB as DB
@@ -50,3 +51,11 @@ for family in familyHasInstances:
         result += sum([instance.Id.IntegerValue for instance in family_get_dependet_instances(family)])
 
 print ("{} {}".format("Решение result =", result))
+=======
+def pick_rooms():
+    references = uidoc.Selection.PickObjects(
+        Selection.ObjectType.Element, RoomSelectionFilter(),
+        'Выделите помещения')
+    return [doc.GetElement(reference)
+for reference in references]
+>>>>>>> c3ec813 (Сделал другую функцию в тестовом модуле)

@@ -32,6 +32,7 @@ def familyHasInstanceBool(family, document=doc):  # noqa
 
 
 def family_get_dependet_instances(family):
+    """Получить экз-ры семейства"""
     return
 
 # ===============================================================
@@ -50,3 +51,25 @@ for family in familyHasInstances:
         result += sum([instance.Id.IntegerValue for instance in family_get_dependet_instances(family)])
 
 print ("{} {}".format("Решение result =", result))
+=======
+=======
+>>>>>>> fe95388 (Revert "Добавил наполнение тестовому модулю")
+=======
+>>>>>>> fe95388e4b9cf8b618d5de0b92710028aa8fa0e3
+def pick_rooms():
+    references = uidoc.Selection.PickObjects(
+        Selection.ObjectType.Element, RoomSelectionFilter(),
+        'Выделите помещения')
+    return [doc.GetElement(reference)
+for reference in references]
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> c3ec813 (Сделал другую функцию в тестовом модуле)
+=======
+=======
+>>>>>>> parent of 8642c3e (Добавил наполнение тестовому модулю)
+>>>>>>> fe95388 (Revert "Добавил наполнение тестовому модулю")
+=======
+=======
+>>>>>>> parent of 8642c3e (Добавил наполнение тестовому модулю)
+>>>>>>> fe95388e4b9cf8b618d5de0b92710028aa8fa0e3
